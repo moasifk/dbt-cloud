@@ -35,8 +35,10 @@ models:
   staging:
     # Applies to all files under models/staging/
     jaffle_shop:
-      materialized: view
+      +materialized: view
     stripe:
-      materialized: view
-    marts:
+      +materialized: view
+  intermediate:
+      +materialized: view
+  marts:
       +materialized: table
